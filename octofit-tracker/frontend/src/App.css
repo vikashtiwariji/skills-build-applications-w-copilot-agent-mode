@@ -1,0 +1,157 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222b45;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(44, 83, 100, 0.08);
+}
+
+.navbar-logo {
+  height: 48px;
+  margin-right: 1.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  color: #f7fafc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.navbar-link:hover {
+  color: #ffd166;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c5364;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+h1 {
+  color: #0f2027;
+  font-size: 2.5rem;
+}
+h2 {
+  color: #3282b8;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(44, 83, 100, 0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #f7fafc;
+  box-shadow: 0 2px 8px rgba(44, 83, 100, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background: #3282b8;
+  color: #fff;
+  font-weight: 600;
+}
+tr:nth-child(even) {
+  background: #e0eafc;
+}
+tr:hover {
+  background: #b6e0fe;
+}
+
+/* Links */
+a {
+  color: #3282b8;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #185a9d;
+}
+
+/* General Container */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 83, 100, 0.10);
+  padding: 2rem 2.5rem;
+}
+
+/* Logo left alignment utility */
+.logo-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Misc */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0eafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #3282b8;
+  border-radius: 4px;
+}
+ 
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
