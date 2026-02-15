@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`;
+  const endpoint = `${process.env.REACT_APP_API_BASE_URL}teams/`;
 
   useEffect(() => {
     console.log('Fetching from:', endpoint);
@@ -19,11 +19,24 @@ const Teams = () => {
   return (
     <div>
       <h2>Teams</h2>
-      <ul>
-        {teams.map((team, idx) => (
-          <li key={team.id || idx}>{JSON.stringify(team)}</li>
-        ))}
-      </ul>
+      <table className="styled-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Created At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teams.map((team, idx) => (
+            <tr key={team.id || idx}>
+              <td>{idx + 1}</td>
+              <td>{team.name}</td>
+              <td>{team.created_at ? new Date(team.created_at).toLocaleString() : ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

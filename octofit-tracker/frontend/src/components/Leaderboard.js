@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`;
+  const endpoint = `${process.env.REACT_APP_API_BASE_URL}leaderboard/`;
 
   useEffect(() => {
     console.log('Fetching from:', endpoint);
@@ -19,11 +19,26 @@ const Leaderboard = () => {
   return (
     <div>
       <h2>Leaderboard</h2>
-      <ul>
-        {leaders.map((leader, idx) => (
-          <li key={leader.id || idx}>{JSON.stringify(leader)}</li>
-        ))}
-      </ul>
+      <table className="styled-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Points</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leaders.map((leader, idx) => (
+            <tr key={leader.id || idx}>
+              <td>{idx + 1}</td>
+              <td>{leader.team}</td>
+              <td>{leader.points}</td>
+              <td>{leader.updated_at ? new Date(leader.updated_at).toLocaleString() : ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
