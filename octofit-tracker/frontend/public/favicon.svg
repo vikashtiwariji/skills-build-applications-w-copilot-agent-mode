@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="32" fill="#3282b8"/>
+  <path d="M32 14C22.0589 14 14 22.0589 14 32C14 41.9411 22.0589 50 32 50C41.9411 50 50 41.9411 50 32C50 22.0589 41.9411 14 32 14ZM32 46C24.268 46 18 39.732 18 32C18 24.268 24.268 18 32 18C39.732 18 46 24.268 46 32C46 39.732 39.732 46 32 46Z" fill="#fff"/>
+  <text x="32" y="40" text-anchor="middle" fill="#ffd166" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">O</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="24" cy="24" r="24" fill="#3282b8"/>
+  <path d="M24 10C17.3726 10 12 15.3726 12 22C12 28.6274 17.3726 34 24 34C30.6274 34 36 28.6274 36 22C36 15.3726 30.6274 10 24 10ZM24 31C19.0294 31 15 26.9706 15 22C15 17.0294 19.0294 13 24 13C28.9706 13 33 17.0294 33 22C33 26.9706 28.9706 31 24 31Z" fill="#fff"/>
+  <text x="24" y="28" text-anchor="middle" fill="#ffd166" font-size="12" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">O</text>
+</svg>
