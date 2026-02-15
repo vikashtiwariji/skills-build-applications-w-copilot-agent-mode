@@ -1,3 +1,37 @@
+/* Styled Table for Data Display */
+.styled-table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  min-width: 350px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 83, 100, 0.08);
+}
+.styled-table thead tr {
+  background-color: #3282b8;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 16px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #e0eafc;
+}
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f8fa;
+}
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #3282b8;
+}
+.styled-table tbody tr:hover {
+  background-color: #e0eafc;
+}
 
 body {
   margin: 0;

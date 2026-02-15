@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Activities = () => {
   const [activities, setActivities] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`;
+  const endpoint = `${process.env.REACT_APP_API_BASE_URL}activities/`;
 
   useEffect(() => {
     console.log('Fetching from:', endpoint);
@@ -19,11 +19,28 @@ const Activities = () => {
   return (
     <div>
       <h2>Activities</h2>
-      <ul>
-        {activities.map((activity, idx) => (
-          <li key={activity.id || idx}>{JSON.stringify(activity)}</li>
-        ))}
-      </ul>
+      <table className="styled-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Type</th>
+            <th>Duration (min)</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          {activities.map((activity, idx) => (
+            <tr key={activity.id || idx}>
+              <td>{idx + 1}</td>
+              <td>{activity.user}</td>
+              <td>{activity.activity_type}</td>
+              <td>{activity.duration}</td>
+              <td>{activity.team}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
